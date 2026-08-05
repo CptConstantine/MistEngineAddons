@@ -18,8 +18,8 @@ test("accepts Legend in the Mist on Foundry 14", () => {
   assert.deepEqual(
     getCompatibility({
       foundryVersion: "14.347",
-      systemId: "litmv2",
-      systemVersion: "14.65",
+      systemId: "mist-engine-fvtt",
+      systemVersion: "14.5.4",
     }),
     { compatible: true, reason: null },
   );
@@ -40,15 +40,15 @@ test("rejects unsupported Foundry or system majors", () => {
   assert.equal(
     getCompatibility({
       foundryVersion: "15.0.0",
-      systemId: "litmv2",
-      systemVersion: "14.65",
+      systemId: "mist-engine-fvtt",
+      systemVersion: "14.5.4",
     }).reason,
     "wrong-foundry-version",
   );
   assert.equal(
     getCompatibility({
       foundryVersion: "14.347",
-      systemId: "litmv2",
+      systemId: "mist-engine-fvtt",
       systemVersion: "15.0.0",
     }).reason,
     "wrong-system-version",
@@ -59,7 +59,7 @@ test("reads Foundry runtime fields without depending on global state", () => {
   assert.deepEqual(
     getRuntimeCompatibility({
       release: { generation: 14 },
-      system: { id: "litmv2", version: "14.65" },
+      system: { id: "mist-engine-fvtt", version: "14.5.4" },
     }),
     { compatible: true, reason: null },
   );

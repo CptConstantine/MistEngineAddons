@@ -28,23 +28,25 @@ test("UI features do nothing while the feature setting is disabled", () => {
   let calls = 0;
   const registry = createUiFeatureRegistry({
     isEnabled: () => false,
-    features: { onRollDialogRendered: () => calls++ },
+    features: { onSceneControlButtons: () => calls++ },
   });
 
-  assert.equal(registry.onRollDialogRendered({}), false);
+  assert.equal(registry.onSceneControlButtons([]), false);
   assert.equal(calls, 0);
 });
 
 test("UI features run only when enabled", () => {
-  let renderedDialog;
+  let sceneControls;
   const registry = createUiFeatureRegistry({
     isEnabled: () => true,
-    features: { onRollDialogRendered: (dialog) => (renderedDialog = dialog) },
+    features: {
+      onSceneControlButtons: (controls) => (sceneControls = controls),
+    },
   });
-  const dialog = { id: "roll-dialog" };
+  const controls = [];
 
-  assert.equal(registry.onRollDialogRendered(dialog), true);
-  assert.equal(renderedDialog, dialog);
+  assert.equal(registry.onSceneControlButtons(controls), true);
+  assert.equal(sceneControls, controls);
 });
 
 test("hook registration is idempotent and removable", () => {
@@ -53,9 +55,9 @@ test("hook registration is idempotent and removable", () => {
   const registrar = createUiHookRegistrar({
     hooks,
     registry: {
-      onRollDialogRendered: () => calls.push("rendered"),
-      onRollDialogClosed: () => calls.push("closed"),
-      onSceneTagsChanged: () => calls.push("changed"),
+      onSceneControlButtons: () => calls.push("scene-controls"),
+      onCanvasReady: () => calls.push("canvas-ready"),
+      onActorUpdated: () => calls.push("actor-updated"),
     },
   });
 
@@ -64,7 +66,7 @@ test("hook registration is idempotent and removable", () => {
   assert.equal(hooks.listeners.size, 3);
 
   [...hooks.listeners.values()][0].callback();
-  assert.deepEqual(calls, ["rendered"]);
+  assert.deepEqual(calls, ["scene-controls"]);
 
   assert.equal(registrar.unregister(), true);
   assert.equal(registrar.unregister(), false);

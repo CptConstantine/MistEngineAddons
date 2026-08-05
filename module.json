@@ -25,9 +25,9 @@
   "relationships": {
     "systems": [
       {
-        "id": "litmv2",
+        "id": "mist-engine-fvtt",
         "type": "system",
-        "manifest": "https://raw.githubusercontent.com/Son-of-Oak-Community/litmv2/refs/heads/main/system.json",
+        "manifest": "https://github.com/MrTheBino/mist-engine-fvtt/releases/latest/download/system.json",
         "compatibility": {
           "minimum": "14",
           "verified": "14",

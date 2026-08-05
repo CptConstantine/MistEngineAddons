@@ -1,7 +1,7 @@
 const UI_HOOKS = Object.freeze([
-  ["litm.rollDialogRendered", "onRollDialogRendered"],
-  ["litm.rollDialogClosed", "onRollDialogClosed"],
-  ["litm.sceneTagsChanged", "onSceneTagsChanged"],
+  ["getSceneControlButtons", "onSceneControlButtons"],
+  ["canvasReady", "onCanvasReady"],
+  ["updateActor", "onActorUpdated"],
 ]);
 
 export function createUiHookRegistrar({ hooks, registry }) {

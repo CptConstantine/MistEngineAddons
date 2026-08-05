@@ -7,9 +7,9 @@
       }
     },
     "Compatibility": {
-      "WrongSystem": "Mist Engine Addons requires the Legend in the Mist v2 system (litmv2). Module features are disabled.",
+      "WrongSystem": "Mist Engine Addons requires the official Mist Engine system (mist-engine-fvtt). Module features are disabled.",
       "WrongFoundryVersion": "Mist Engine Addons supports Foundry Virtual Tabletop version 14. Module features are disabled.",
-      "WrongSystemVersion": "Mist Engine Addons requires Legend in the Mist v2 version 14. Module features are disabled.",
+      "WrongSystemVersion": "Mist Engine Addons requires Mist Engine version 14. Module features are disabled.",
       "Unknown": "Mist Engine Addons could not verify compatibility. Module features are disabled."
     }
   }

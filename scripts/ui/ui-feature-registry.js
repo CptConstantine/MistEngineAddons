@@ -9,9 +9,9 @@ export function createUiFeatureRegistry({ isEnabled, features = {} }) {
   }
 
   return Object.freeze({
-    onRollDialogRendered: (...args) =>
-      dispatch("onRollDialogRendered", ...args),
-    onRollDialogClosed: (...args) => dispatch("onRollDialogClosed", ...args),
-    onSceneTagsChanged: (...args) => dispatch("onSceneTagsChanged", ...args),
+    onSceneControlButtons: (...args) =>
+      dispatch("onSceneControlButtons", ...args),
+    onCanvasReady: (...args) => dispatch("onCanvasReady", ...args),
+    onActorUpdated: (...args) => dispatch("onActorUpdated", ...args),
   });
 }

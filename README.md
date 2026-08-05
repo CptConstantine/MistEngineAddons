@@ -5,7 +5,7 @@ Optional, opt-in quality-of-life and UI enhancements for the Legend in the Mist 
 ## Requirements
 
 - Foundry Virtual Tabletop 14
-- [Legend in the Mist v2](https://github.com/Son-of-Oak-Community/litmv2) (`litmv2`) version 14
+- [Mist Engine](https://github.com/MrTheBino/mist-engine-fvtt) (`mist-engine-fvtt`) version 14
 
 The module disables its features when the active game system or major version is unsupported.
 
@@ -37,11 +37,11 @@ $foundryData = "C:\Path\To\FoundryVTT\Data"
 cmd /c mklink /J "$foundryData\modules\mist-engine-addons" "$PWD"
 ```
 
-Restart Foundry after changing JavaScript files. Use the module in a Foundry 14 world running the `litmv2` system.
+Restart Foundry after changing JavaScript files. Use the module in a Foundry 14 world running the official `mist-engine-fvtt` system.
 
 ## Extension Policy
 
-The module uses documented `litm.*` lifecycle hooks for additive behavior. New UI features should be opt-in, scoped under a module-owned `data-mist-engine-addons` attribute, and tolerate missing or changed system UI. Do not replace `game.litmv2` classes or mutate `CONFIG.ui.combat` unless a feature specifically requires it and its compatibility impact is documented.
+The module uses standard Foundry lifecycle hooks for additive behavior. New UI features should be opt-in, scoped under a module-owned `data-mist-engine-addons` attribute, and tolerate missing or changed system UI. Prefer documented `game.mistenginefvtt` and `CONFIG.MIST_ENGINE` surfaces when a feature needs system data; do not replace system classes or mutate `ui.litmSceneTags` unless a feature specifically requires it and its compatibility impact is documented.
 
 ## Releases
 
