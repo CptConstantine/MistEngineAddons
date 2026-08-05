@@ -1,0 +1,16 @@
+{
+  "name": "mist-engine-addons",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "biome check .",
+    "format": "biome format --write .",
+    "lint": "biome lint .",
+    "test": "node --test",
+    "validate:manifest": "node scripts/validate-manifest.js"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.4.15"
+  }
+}

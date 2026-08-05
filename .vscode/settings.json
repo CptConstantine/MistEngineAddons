@@ -1,0 +1,8 @@
+{
+  "json.schemas": [
+    {
+      "fileMatch": ["/module.json"],
+      "url": "https://json.schemastore.org/foundryvtt-module-manifest.json"
+    }
+  ]
+}

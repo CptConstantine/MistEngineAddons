@@ -1,0 +1,16 @@
+{
+  "MIST_ENGINE_ADDONS": {
+    "Settings": {
+      "EnableUiHooks": {
+        "Name": "Enable Mist Engine UI integrations",
+        "Hint": "Allows installed Mist Engine features to respond to Legend in the Mist UI events. Disable this to leave the system UI untouched."
+      }
+    },
+    "Compatibility": {
+      "WrongSystem": "Mist Engine Addons requires the Legend in the Mist v2 system (litmv2). Module features are disabled.",
+      "WrongFoundryVersion": "Mist Engine Addons supports Foundry Virtual Tabletop version 14. Module features are disabled.",
+      "WrongSystemVersion": "Mist Engine Addons requires Legend in the Mist v2 version 14. Module features are disabled.",
+      "Unknown": "Mist Engine Addons could not verify compatibility. Module features are disabled."
+    }
+  }
+}

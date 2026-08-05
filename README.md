@@ -1,0 +1,48 @@
+# Mist Engine Addons
+
+Optional, opt-in quality-of-life and UI enhancements for the Legend in the Mist Foundry VTT system.
+
+## Requirements
+
+- Foundry Virtual Tabletop 14
+- [Legend in the Mist v2](https://github.com/Son-of-Oak-Community/litmv2) (`litmv2`) version 14
+
+The module disables its features when the active game system or major version is unsupported.
+
+## Installation
+
+In Foundry's **Add-on Modules** tab, select **Install Module** and paste:
+
+```
+https://github.com/CptConstantine/Mist-Engine-Addons/releases/latest/download/module.json
+```
+
+Enable **Mist Engine Addons** in a Legend in the Mist world. Its UI integrations are disabled by default and can be enabled per client from **Configure Settings > Module Settings**.
+
+## Development
+
+Install development dependencies and run the automated checks:
+
+```powershell
+npm install
+npm run check
+npm test
+npm run validate:manifest
+```
+
+For local testing on Windows, identify the user-data folder configured in Foundry and create a directory junction in its `modules` directory:
+
+```powershell
+$foundryData = "C:\Path\To\FoundryVTT\Data"
+cmd /c mklink /J "$foundryData\modules\mist-engine-addons" "$PWD"
+```
+
+Restart Foundry after changing JavaScript files. Use the module in a Foundry 14 world running the `litmv2` system.
+
+## Extension Policy
+
+The module uses documented `litm.*` lifecycle hooks for additive behavior. New UI features should be opt-in, scoped under a module-owned `data-mist-engine-addons` attribute, and tolerate missing or changed system UI. Do not replace `game.litmv2` classes or mutate `CONFIG.ui.combat` unless a feature specifically requires it and its compatibility impact is documented.
+
+## Releases
+
+Update the version in `module.json` and `package.json`, then push a matching semantic version tag such as `v0.1.0`. The release workflow validates the version, packages runtime files, and uploads the zip and `module.json` to GitHub Releases.
