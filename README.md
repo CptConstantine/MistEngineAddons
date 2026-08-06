@@ -14,7 +14,7 @@ The module disables its features when the active game system or major version is
 In Foundry's **Add-on Modules** tab, select **Install Module** and paste:
 
 ```
-https://github.com/CptConstantine/Mist-Engine-Addons/releases/latest/download/module.json
+https://github.com/CptConstantine/MistEngineAddons/releases/latest/download/module.json
 ```
 
 Enable **Mist Engine Addons** in a Legend in the Mist world. Enable **Organize story tags by theme** in **Configure Settings > Module Settings** to group the story-tag bar by theme on your client.
