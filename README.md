@@ -45,4 +45,4 @@ The module uses standard Foundry lifecycle hooks for additive behavior. New UI f
 
 ## Releases
 
-Update the version in `module.json` and `package.json`, then push a matching semantic version tag such as `v0.1.0`. The release workflow validates the version, packages runtime files, and uploads the zip and `module.json` to GitHub Releases.
+Update the version in `module.json` and `package.json`, then push a matching semantic version tag such as `v0.1.0`. The release workflow validates the version, packages runtime files, and uploads the zip and `module.json` to GitHub Releases. If a tag push does not start a run, open the **Release** workflow in GitHub Actions, select **Run workflow**, and enter the existing tag.
