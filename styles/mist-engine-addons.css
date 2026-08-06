@@ -1,3 +1,26 @@
 [data-mist-engine-addons] {
   box-sizing: border-box;
 }
+
+#litm-scene-tags-overlay
+  .litm-sto-story
+  .litm-sto-tags.mist-engine-addons-organized {
+  align-items: stretch;
+  gap: 0.35rem;
+}
+
+#litm-scene-tags-overlay .mist-engine-addons-theme-group {
+  align-items: center;
+  border-inline-start: 2px solid rgb(239 214 147 / 30%);
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  padding-inline-start: 0.35rem;
+}
+
+#litm-scene-tags-overlay .mist-engine-addons-theme-heading {
+  font-size: 0.65rem;
+  font-weight: 700;
+  opacity: 0.65;
+  text-transform: uppercase;
+}

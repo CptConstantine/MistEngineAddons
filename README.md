@@ -17,7 +17,7 @@ In Foundry's **Add-on Modules** tab, select **Install Module** and paste:
 https://github.com/CptConstantine/Mist-Engine-Addons/releases/latest/download/module.json
 ```
 
-Enable **Mist Engine Addons** in a Legend in the Mist world. Its UI integrations are disabled by default and can be enabled per client from **Configure Settings > Module Settings**.
+Enable **Mist Engine Addons** in a Legend in the Mist world. Enable **Organize story tags by theme** in **Configure Settings > Module Settings** to group the story-tag bar by theme on your client.
 
 ## Development
 
@@ -41,7 +41,7 @@ Restart Foundry after changing JavaScript files. Use the module in a Foundry 14 
 
 ## Extension Policy
 
-The module uses standard Foundry lifecycle hooks for additive behavior. New UI features should be opt-in, scoped under a module-owned `data-mist-engine-addons` attribute, and tolerate missing or changed system UI. Prefer documented `game.mistenginefvtt` and `CONFIG.MIST_ENGINE` surfaces when a feature needs system data; do not replace system classes or mutate `ui.litmSceneTags` unless a feature specifically requires it and its compatibility impact is documented.
+The module uses standard Foundry lifecycle hooks for additive behavior. New UI features should be opt-in, scoped under a module-owned `data-mist-engine-addons` attribute, and tolerate missing or changed system UI. The story-tag organizer runs after `renderMistSceneTagsOverlay`, preserving the system's existing tag elements while arranging them under theme labels. Prefer documented `game.mistenginefvtt` and `CONFIG.MIST_ENGINE` surfaces when a feature needs system data; do not replace system classes or mutate `ui.litmSceneTags` unless a feature specifically requires it and its compatibility impact is documented.
 
 ## Releases
 

@@ -30,8 +30,7 @@
         "manifest": "https://github.com/MrTheBino/mist-engine-fvtt/releases/latest/download/system.json",
         "compatibility": {
           "minimum": "14",
-          "verified": "14",
-          "maximum": "14"
+          "verified": "14"
         }
       }
     ]

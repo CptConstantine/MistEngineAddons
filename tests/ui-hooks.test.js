@@ -28,10 +28,10 @@ test("UI features do nothing while the feature setting is disabled", () => {
   let calls = 0;
   const registry = createUiFeatureRegistry({
     isEnabled: () => false,
-    features: { onSceneControlButtons: () => calls++ },
+    features: { onSceneTagsOverlayRendered: () => calls++ },
   });
 
-  assert.equal(registry.onSceneControlButtons([]), false);
+  assert.equal(registry.onSceneTagsOverlayRendered({}, {}), false);
   assert.equal(calls, 0);
 });
 
@@ -40,13 +40,14 @@ test("UI features run only when enabled", () => {
   const registry = createUiFeatureRegistry({
     isEnabled: () => true,
     features: {
-      onSceneControlButtons: (controls) => (sceneControls = controls),
+      onSceneTagsOverlayRendered: (_application, html) =>
+        (sceneControls = html),
     },
   });
-  const controls = [];
+  const overlay = {};
 
-  assert.equal(registry.onSceneControlButtons(controls), true);
-  assert.equal(sceneControls, controls);
+  assert.equal(registry.onSceneTagsOverlayRendered({}, overlay), true);
+  assert.equal(sceneControls, overlay);
 });
 
 test("hook registration is idempotent and removable", () => {
@@ -55,21 +56,19 @@ test("hook registration is idempotent and removable", () => {
   const registrar = createUiHookRegistrar({
     hooks,
     registry: {
-      onSceneControlButtons: () => calls.push("scene-controls"),
-      onCanvasReady: () => calls.push("canvas-ready"),
-      onActorUpdated: () => calls.push("actor-updated"),
+      onSceneTagsOverlayRendered: () => calls.push("overlay-rendered"),
     },
   });
 
   assert.equal(registrar.register(), true);
   assert.equal(registrar.register(), false);
-  assert.equal(hooks.listeners.size, 3);
+  assert.equal(hooks.listeners.size, 1);
 
   [...hooks.listeners.values()][0].callback();
-  assert.deepEqual(calls, ["scene-controls"]);
+  assert.deepEqual(calls, ["overlay-rendered"]);
 
   assert.equal(registrar.unregister(), true);
   assert.equal(registrar.unregister(), false);
   assert.equal(hooks.listeners.size, 0);
-  assert.equal(hooks.removed.length, 3);
+  assert.equal(hooks.removed.length, 1);
 });

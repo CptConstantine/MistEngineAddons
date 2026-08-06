@@ -3,5 +3,5 @@ export const SYSTEM_ID = "mist-engine-fvtt";
 export const FOUNDRY_MAJOR_VERSION = 14;
 
 export const SETTINGS = Object.freeze({
-  ENABLE_UI_HOOKS: "enable-ui-hooks",
+  ORGANIZE_STORY_TAGS: "organize-story-tags",
 });

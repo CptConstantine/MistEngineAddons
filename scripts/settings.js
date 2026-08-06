@@ -1,16 +1,17 @@
 import { MODULE_ID, SETTINGS } from "./constants.js";
 
 export function registerSettings() {
-  game.settings.register(MODULE_ID, SETTINGS.ENABLE_UI_HOOKS, {
-    name: "MIST_ENGINE_ADDONS.Settings.EnableUiHooks.Name",
-    hint: "MIST_ENGINE_ADDONS.Settings.EnableUiHooks.Hint",
+  game.settings.register(MODULE_ID, SETTINGS.ORGANIZE_STORY_TAGS, {
+    name: "MIST_ENGINE_ADDONS.Settings.OrganizeStoryTags.Name",
+    hint: "MIST_ENGINE_ADDONS.Settings.OrganizeStoryTags.Hint",
     scope: "client",
     config: true,
     type: Boolean,
     default: false,
+    onChange: () => globalThis.ui?.litmSceneTags?.render(),
   });
 }
 
-export function areUiHooksEnabled() {
-  return game.settings.get(MODULE_ID, SETTINGS.ENABLE_UI_HOOKS);
+export function isStoryTagOrganizationEnabled() {
+  return game.settings.get(MODULE_ID, SETTINGS.ORGANIZE_STORY_TAGS);
 }

@@ -9,9 +9,7 @@ export function createUiFeatureRegistry({ isEnabled, features = {} }) {
   }
 
   return Object.freeze({
-    onSceneControlButtons: (...args) =>
-      dispatch("onSceneControlButtons", ...args),
-    onCanvasReady: (...args) => dispatch("onCanvasReady", ...args),
-    onActorUpdated: (...args) => dispatch("onActorUpdated", ...args),
+    onSceneTagsOverlayRendered: (...args) =>
+      dispatch("onSceneTagsOverlayRendered", ...args),
   });
 }

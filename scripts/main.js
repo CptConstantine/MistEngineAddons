@@ -1,10 +1,11 @@
 import { MODULE_ID } from "./constants.js";
-import { areUiHooksEnabled, registerSettings } from "./settings.js";
+import { isStoryTagOrganizationEnabled, registerSettings } from "./settings.js";
 import {
   getCompatibilityMessageKey,
   getRuntimeCompatibility,
 } from "./system-compatibility.js";
 import { createUiHookRegistrar } from "./ui/register-ui-hooks.js";
+import { organizeStoryTagOverlay } from "./ui/story-tag-organizer.js";
 import { createUiFeatureRegistry } from "./ui/ui-feature-registry.js";
 
 let uiHookRegistrar;
@@ -31,9 +32,19 @@ function reportIncompatibility(compatibility) {
 function registerUiHooks() {
   uiHookRegistrar ??= createUiHookRegistrar({
     hooks: Hooks,
-    registry: createUiFeatureRegistry({ isEnabled: areUiHooksEnabled }),
+    registry: createUiFeatureRegistry({
+      isEnabled: isStoryTagOrganizationEnabled,
+      features: {
+        onSceneTagsOverlayRendered: (_application, html) =>
+          organizeStoryTagOverlay(html),
+      },
+    }),
   });
   uiHookRegistrar.register();
+
+  if (isStoryTagOrganizationEnabled()) {
+    organizeStoryTagOverlay(ui.litmSceneTags?.element);
+  }
 }
 
 Hooks.once("init", () => {

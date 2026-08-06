@@ -6,6 +6,9 @@ const manifest = JSON.parse(
   await readFile(new URL("../module.json", import.meta.url), "utf8"),
 );
 const expectedVersion = process.env.RELEASE_VERSION;
+const supportedSystem = manifest.relationships?.systems?.find(
+  (system) => system.id === SYSTEM_ID,
+);
 
 function assert(condition, message) {
   if (!condition) {
@@ -20,8 +23,12 @@ assert(
   `Expected Foundry minimum version ${FOUNDRY_MAJOR_VERSION}.`,
 );
 assert(
-  manifest.relationships?.systems?.some((system) => system.id === SYSTEM_ID),
+  supportedSystem,
   `Expected '${SYSTEM_ID}' as a required system relationship.`,
+);
+assert(
+  !supportedSystem.compatibility?.maximum,
+  `Do not set a maximum version for '${SYSTEM_ID}' without testing that system version.`,
 );
 assert(
   manifest.esmodules?.includes("scripts/main.js"),

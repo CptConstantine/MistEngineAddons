@@ -1,7 +1,5 @@
 const UI_HOOKS = Object.freeze([
-  ["getSceneControlButtons", "onSceneControlButtons"],
-  ["canvasReady", "onCanvasReady"],
-  ["updateActor", "onActorUpdated"],
+  ["renderMistSceneTagsOverlay", "onSceneTagsOverlayRendered"],
 ]);
 
 export function createUiHookRegistrar({ hooks, registry }) {
