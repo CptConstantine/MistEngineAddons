@@ -2,6 +2,12 @@
 
 Optional, opt-in quality-of-life and UI enhancements for the Legend in the Mist Foundry VTT system.
 
+## Current Features
+
+- Story tags organized by theme in the tags bar.
+- GM roll confirmation dialog that allows the GM to directly modify the roll before approving.
+- (WIP) Selectable styles to change the look of Foundry.
+
 ## Requirements
 
 - Foundry Virtual Tabletop 14
