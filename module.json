@@ -2,7 +2,7 @@
   "id": "mist-engine-addons",
   "title": "Mist Engine Addons",
   "description": "Optional quality-of-life and UI enhancements for Legend in the Mist.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "authors": [
     {
       "name": "CptConstantine"
@@ -15,6 +15,7 @@
   },
   "esmodules": ["scripts/main.js"],
   "styles": ["styles/mist-engine-addons.css"],
+  "socket": true,
   "languages": [
     {
       "lang": "en",

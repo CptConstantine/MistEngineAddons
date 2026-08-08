@@ -19,6 +19,8 @@ https://github.com/CptConstantine/MistEngineAddons/releases/latest/download/modu
 
 Enable **Mist Engine Addons** in a Legend in the Mist world. Enable **Organize story tags by theme** in **Configure Settings > Module Settings** to group the story-tag bar by theme on your client.
 
+To let the narrator edit proposed rolls, enable both Mist Engine's **GM roll confirmation** and this module's **Enable narrator roll editor** world setting. The narrator receives a native roll-dialog mirror while the player waits for approval. Selecting or deselecting tags in either client’s character sheet or scene tags window updates both dialogs through Mist Engine’s normal document refresh. The narrator sets positive and negative modifiers and Might at `-6`, `-3`, `0`, `+3`, or `+6`, then rejects or approves the roll. The feature never burns a player tag on the narrator's behalf.
+
 ## Development
 
 Install development dependencies and run the automated checks:

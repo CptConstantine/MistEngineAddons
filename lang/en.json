@@ -4,6 +4,10 @@
       "OrganizeStoryTags": {
         "Name": "Organize story tags by theme",
         "Hint": "Groups the Mist Engine story-tag bar by theme on this client."
+      },
+      "EnableNarratorRollEditor": {
+        "Name": "Enable narrator roll editor",
+        "Hint": "Replaces Mist Engine's standard GM confirmation with an editable narrator review when GM roll confirmation is enabled."
       }
     },
     "Compatibility": {
