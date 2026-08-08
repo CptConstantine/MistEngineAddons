@@ -8,6 +8,13 @@
       "EnableNarratorRollEditor": {
         "Name": "Enable narrator roll editor",
         "Hint": "Replaces Mist Engine's standard GM confirmation with an editable narrator review when GM roll confirmation is enabled."
+      },
+      "StyleOverride": {
+        "Name": "Mist Engine style",
+        "Hint": "Select the presentation used by every client in this world. Reload clients after changing this setting.",
+        "None": "None (Default Styling)",
+        "CityOfMist": "City of Mist",
+        "Otherscape": "Otherscape"
       }
     },
     "Compatibility": {

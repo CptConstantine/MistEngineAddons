@@ -1,0 +1,170 @@
+html[data-mist-engine-addons-theme="otherscape"] body {
+  --litm-color-bg: #141725;
+  --litm-color: #f3f4f7;
+  --litm-color-alt-bg: #232a3e;
+  --litm-color-dark-bg: #090b14;
+  --litm-color-accent-bg: #152d3a;
+  --litm-color-accent: #d9fff7;
+  --litm-color-accent-2: #ff3e9d;
+  --litm-color-accent-3: #6ef7d0;
+  --litm-color-primary-bg: #1e2b41;
+  --litm-color-primary: #f3f4f7;
+  --litm-color-row-odd: rgb(255 255 255 / 6%);
+  --litm-color-weakness: #ff9ac8;
+  --litm-color-weakness-bg: rgb(255 62 157 / 20%);
+  --litm-color-muted-bg: rgb(126 142 178 / 20%);
+  --litm-color-tag-bg: rgb(110 247 208 / 45%);
+  --litm-color-status-bg: rgb(124 185 255 / 45%);
+  --litm-color-limit-bg: rgb(255 62 157 / 45%);
+  --litm-tab-text-color: #d9fff7;
+  --litm-font-heading: "Trebuchet MS", "Arial Narrow", sans-serif;
+  --litm-font-accent: "Trebuchet MS", sans-serif;
+  --litm-font-text: Verdana, Geneva, sans-serif;
+}
+
+html[data-mist-engine-addons-theme="otherscape"] .mist-engine,
+html[data-mist-engine-addons-theme="otherscape"] .mist-engine .window-content,
+html[data-mist-engine-addons-theme="otherscape"] #litm-scene-tags-overlay {
+  background-color: var(--litm-color-bg);
+  color: var(--litm-color);
+}
+
+html[data-mist-engine-addons-theme="otherscape"] .mist-engine .window-header,
+html[data-mist-engine-addons-theme="otherscape"] .mist-engine .sheet-header,
+html[data-mist-engine-addons-theme="otherscape"]
+  #litm-scene-tags-overlay
+  .litm-sto-caption {
+  background-color: var(--litm-color-dark-bg);
+  border-bottom: 1px solid #6ef7d0;
+  color: var(--litm-color-accent);
+  font-family: var(--litm-font-heading);
+  text-transform: uppercase;
+}
+
+html[data-mist-engine-addons-theme="otherscape"] .mist-engine h1,
+html[data-mist-engine-addons-theme="otherscape"] .mist-engine h2,
+html[data-mist-engine-addons-theme="otherscape"] .mist-engine h3,
+html[data-mist-engine-addons-theme="otherscape"] .mist-engine .heading,
+html[data-mist-engine-addons-theme="otherscape"] .mist-engine .item-name,
+html[data-mist-engine-addons-theme="otherscape"] .mist-engine .tab.active {
+  color: #6ef7d0;
+  font-family: var(--litm-font-heading);
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+html[data-mist-engine-addons-theme="otherscape"] .mist-engine input,
+html[data-mist-engine-addons-theme="otherscape"] .mist-engine select,
+html[data-mist-engine-addons-theme="otherscape"] .mist-engine textarea,
+html[data-mist-engine-addons-theme="otherscape"] .mist-engine .editor-content,
+html[data-mist-engine-addons-theme="otherscape"] .mist-engine .tab-notes {
+  background-color: #0d111d;
+  border-color: #40617d;
+  color: var(--litm-color);
+}
+
+html[data-mist-engine-addons-theme="otherscape"] .mist-engine input:focus,
+html[data-mist-engine-addons-theme="otherscape"] .mist-engine select:focus,
+html[data-mist-engine-addons-theme="otherscape"] .mist-engine textarea:focus {
+  border-color: #6ef7d0;
+  box-shadow: 0 0 0 2px rgb(110 247 208 / 30%);
+}
+
+html[data-mist-engine-addons-theme="otherscape"]
+  .mist-engine
+  button:not(.window-header-control),
+html[data-mist-engine-addons-theme="otherscape"] .mist-engine .roll-button,
+html[data-mist-engine-addons-theme="otherscape"]
+  [data-mist-engine-addons-roll-decision] {
+  background-color: #152d3a;
+  border: 1px solid #4ba8a8;
+  border-radius: 2px;
+  color: #d9fff7;
+  font-family: var(--litm-font-heading);
+  text-shadow: none;
+  text-transform: uppercase;
+}
+
+html[data-mist-engine-addons-theme="otherscape"]
+  .mist-engine
+  button:not(.window-header-control):hover:not(:disabled),
+html[data-mist-engine-addons-theme="otherscape"]
+  .mist-engine
+  .roll-button:hover:not(:disabled),
+html[data-mist-engine-addons-theme="otherscape"]
+  [data-mist-engine-addons-roll-decision]:hover:not(:disabled) {
+  background-color: #ff3e9d;
+  border-color: #ff9ac8;
+  color: #090b14;
+}
+
+html[data-mist-engine-addons-theme="otherscape"]
+  .mist-engine
+  button:focus-visible,
+html[data-mist-engine-addons-theme="otherscape"] .mist-engine a:focus-visible,
+html[data-mist-engine-addons-theme="otherscape"]
+  [data-mist-engine-addons-roll-decision]:focus-visible {
+  outline: 2px solid #ffcf4a;
+  outline-offset: 2px;
+}
+
+html[data-mist-engine-addons-theme="otherscape"] .mist-engine button:disabled,
+html[data-mist-engine-addons-theme="otherscape"]
+  .mist-engine
+  .roll-button:disabled,
+html[data-mist-engine-addons-theme="otherscape"]
+  [data-mist-engine-addons-roll-decision]:disabled {
+  background-color: #30384c;
+  border-color: #4b5469;
+  color: #a4acc0;
+  opacity: 0.76;
+}
+
+html[data-mist-engine-addons-theme="otherscape"] .mist-engine .tabs,
+html[data-mist-engine-addons-theme="otherscape"] .mist-engine nav.sheet-tabs,
+html[data-mist-engine-addons-theme="otherscape"] .mist-engine .dialog-footer {
+  border-color: #40617d;
+}
+
+html[data-mist-engine-addons-theme="otherscape"] .mist-engine .tab.active,
+html[data-mist-engine-addons-theme="otherscape"] .mist-engine .item,
+html[data-mist-engine-addons-theme="otherscape"] .mist-engine .card,
+html[data-mist-engine-addons-theme="otherscape"] .mist-engine .themekit-box {
+  background-color: #1c2233;
+  border-color: #40617d;
+}
+
+html[data-mist-engine-addons-theme="otherscape"] .mist-engine a,
+html[data-mist-engine-addons-theme="otherscape"] .mist-engine .clickable,
+html[data-mist-engine-addons-theme="otherscape"] .mist-engine .rollable {
+  color: #6ef7d0;
+}
+
+html[data-mist-engine-addons-theme="otherscape"] .mist-engine .rollable:hover,
+html[data-mist-engine-addons-theme="otherscape"] .mist-engine .clickable:hover {
+  color: #ff9ac8;
+  text-shadow: 0 0 7px rgb(255 62 157 / 60%);
+}
+
+html[data-mist-engine-addons-theme="otherscape"]
+  #litm-scene-tags-overlay
+  .litm-sto-story,
+html[data-mist-engine-addons-theme="otherscape"]
+  #litm-scene-tags-overlay
+  .litm-sto-tag {
+  background-color: #1c2233;
+  border-color: #40617d;
+  color: var(--litm-color);
+}
+
+html[data-mist-engine-addons-theme="otherscape"]
+  .mist-engine-addons-theme-group {
+  border-inline-start-color: rgb(110 247 208 / 75%);
+}
+
+html[data-mist-engine-addons-theme="otherscape"]
+  .mist-engine-addons-theme-heading {
+  color: #6ef7d0;
+  font-family: var(--litm-font-heading);
+  opacity: 0.95;
+}

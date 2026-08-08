@@ -3,6 +3,7 @@ import { openNarratorRollMirror } from "./roll-editor/narrator-roll-mirror.js";
 import { createNarratorRollEditorIntegration } from "./roll-editor/system-integration.js";
 import { getRollActor } from "./roll-editor/tag-catalog.js";
 import {
+  getStyleOverride,
   isNarratorRollEditorEnabled,
   isStoryTagOrganizationEnabled,
   registerSettings,
@@ -11,6 +12,7 @@ import {
   getCompatibilityMessageKey,
   getRuntimeCompatibility,
 } from "./system-compatibility.js";
+import { applyStyleOverride } from "./theme-manager.js";
 import { createUiHookRegistrar } from "./ui/register-ui-hooks.js";
 import { organizeStoryTagOverlay } from "./ui/story-tag-organizer.js";
 import { createUiFeatureRegistry } from "./ui/ui-feature-registry.js";
@@ -103,6 +105,7 @@ Hooks.once("ready", () => {
     return;
   }
 
+  applyStyleOverride({ theme: getStyleOverride() });
   registerUiHooks();
   registerNarratorRollEditor();
   console.info(`${MODULE_ID} | Ready.`);

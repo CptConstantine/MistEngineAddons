@@ -21,6 +21,8 @@ Enable **Mist Engine Addons** in a Legend in the Mist world. Enable **Organize s
 
 To let the narrator edit proposed rolls, enable both Mist Engine's **GM roll confirmation** and this module's **Enable narrator roll editor** world setting. The narrator receives a native roll-dialog mirror while the player waits for approval. Selecting or deselecting tags in either client’s character sheet or scene tags window updates both dialogs through Mist Engine’s normal document refresh. The narrator sets positive and negative modifiers and Might at `-6`, `-3`, `0`, `+3`, or `+6`, then rejects or approves the roll. The feature never burns a player tag on the narrator's behalf.
 
+The GM can select **Mist Engine style** in the module's world settings to apply the **City of Mist** or **Otherscape** presentation to compatible Mist Engine UI for every client. Select **None (Default Styling)** to retain the system's native appearance. Clients reload when the GM changes this setting.
+
 ## Development
 
 Install development dependencies and run the automated checks:

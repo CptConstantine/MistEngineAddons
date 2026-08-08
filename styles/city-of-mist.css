@@ -1,0 +1,167 @@
+html[data-mist-engine-addons-theme="city-of-mist"] body {
+  --litm-color-bg: #e7dfcf;
+  --litm-color: #17252d;
+  --litm-color-alt-bg: #c8c1b3;
+  --litm-color-dark-bg: #1d303a;
+  --litm-color-accent-bg: #254c5c;
+  --litm-color-accent: #f5e8c5;
+  --litm-color-accent-2: #8d3c30;
+  --litm-color-accent-3: #6e251f;
+  --litm-color-primary-bg: #f5e8c5;
+  --litm-color-primary: #17252d;
+  --litm-color-row-odd: rgb(23 37 45 / 10%);
+  --litm-color-weakness: #70291f;
+  --litm-color-weakness-bg: rgb(141 60 48 / 22%);
+  --litm-color-muted-bg: rgb(29 48 58 / 15%);
+  --litm-color-tag-bg: rgb(213 165 57 / 58%);
+  --litm-color-status-bg: rgb(80 135 109 / 56%);
+  --litm-color-limit-bg: rgb(160 62 48 / 58%);
+  --litm-tab-text-color: #f5e8c5;
+  --litm-font-heading: Georgia, "Times New Roman", serif;
+  --litm-font-accent: "Trebuchet MS", sans-serif;
+  --litm-font-text: Georgia, "Times New Roman", serif;
+}
+
+html[data-mist-engine-addons-theme="city-of-mist"] .mist-engine,
+html[data-mist-engine-addons-theme="city-of-mist"] .mist-engine .window-content,
+html[data-mist-engine-addons-theme="city-of-mist"] #litm-scene-tags-overlay {
+  background-color: var(--litm-color-bg);
+  color: var(--litm-color);
+}
+
+html[data-mist-engine-addons-theme="city-of-mist"] .mist-engine .window-header,
+html[data-mist-engine-addons-theme="city-of-mist"] .mist-engine .sheet-header,
+html[data-mist-engine-addons-theme="city-of-mist"]
+  #litm-scene-tags-overlay
+  .litm-sto-caption {
+  background-color: var(--litm-color-dark-bg);
+  color: var(--litm-color-accent);
+  font-family: var(--litm-font-heading);
+}
+
+html[data-mist-engine-addons-theme="city-of-mist"] .mist-engine h1,
+html[data-mist-engine-addons-theme="city-of-mist"] .mist-engine h2,
+html[data-mist-engine-addons-theme="city-of-mist"] .mist-engine h3,
+html[data-mist-engine-addons-theme="city-of-mist"] .mist-engine .heading,
+html[data-mist-engine-addons-theme="city-of-mist"] .mist-engine .item-name,
+html[data-mist-engine-addons-theme="city-of-mist"] .mist-engine .tab.active {
+  color: var(--litm-color-accent-3);
+  font-family: var(--litm-font-heading);
+}
+
+html[data-mist-engine-addons-theme="city-of-mist"] .mist-engine input,
+html[data-mist-engine-addons-theme="city-of-mist"] .mist-engine select,
+html[data-mist-engine-addons-theme="city-of-mist"] .mist-engine textarea,
+html[data-mist-engine-addons-theme="city-of-mist"] .mist-engine .editor-content,
+html[data-mist-engine-addons-theme="city-of-mist"] .mist-engine .tab-notes {
+  background-color: #f8f0df;
+  border-color: #8b7962;
+  color: var(--litm-color);
+}
+
+html[data-mist-engine-addons-theme="city-of-mist"] .mist-engine input:focus,
+html[data-mist-engine-addons-theme="city-of-mist"] .mist-engine select:focus,
+html[data-mist-engine-addons-theme="city-of-mist"] .mist-engine textarea:focus {
+  border-color: var(--litm-color-accent-2);
+  box-shadow: 0 0 0 2px rgb(141 60 48 / 26%);
+}
+
+html[data-mist-engine-addons-theme="city-of-mist"]
+  .mist-engine
+  button:not(.window-header-control),
+html[data-mist-engine-addons-theme="city-of-mist"] .mist-engine .roll-button,
+html[data-mist-engine-addons-theme="city-of-mist"]
+  [data-mist-engine-addons-roll-decision] {
+  background-color: var(--litm-color-accent-bg);
+  border: 1px solid #17313d;
+  border-radius: 2px;
+  color: var(--litm-color-accent);
+  font-family: var(--litm-font-heading);
+  text-shadow: none;
+}
+
+html[data-mist-engine-addons-theme="city-of-mist"]
+  .mist-engine
+  button:not(.window-header-control):hover:not(:disabled),
+html[data-mist-engine-addons-theme="city-of-mist"]
+  .mist-engine
+  .roll-button:hover:not(:disabled),
+html[data-mist-engine-addons-theme="city-of-mist"]
+  [data-mist-engine-addons-roll-decision]:hover:not(:disabled) {
+  background-color: #8d3c30;
+  border-color: #6e251f;
+  color: #fff8e8;
+}
+
+html[data-mist-engine-addons-theme="city-of-mist"]
+  .mist-engine
+  button:focus-visible,
+html[data-mist-engine-addons-theme="city-of-mist"] .mist-engine a:focus-visible,
+html[data-mist-engine-addons-theme="city-of-mist"]
+  [data-mist-engine-addons-roll-decision]:focus-visible {
+  outline: 2px solid #d5a539;
+  outline-offset: 2px;
+}
+
+html[data-mist-engine-addons-theme="city-of-mist"] .mist-engine button:disabled,
+html[data-mist-engine-addons-theme="city-of-mist"]
+  .mist-engine
+  .roll-button:disabled,
+html[data-mist-engine-addons-theme="city-of-mist"]
+  [data-mist-engine-addons-roll-decision]:disabled {
+  background-color: #7e7a72;
+  border-color: #69655e;
+  color: #e8e1d2;
+  opacity: 0.72;
+}
+
+html[data-mist-engine-addons-theme="city-of-mist"] .mist-engine .tabs,
+html[data-mist-engine-addons-theme="city-of-mist"] .mist-engine nav.sheet-tabs,
+html[data-mist-engine-addons-theme="city-of-mist"] .mist-engine .dialog-footer {
+  border-color: #8b7962;
+}
+
+html[data-mist-engine-addons-theme="city-of-mist"] .mist-engine .tab.active,
+html[data-mist-engine-addons-theme="city-of-mist"] .mist-engine .item,
+html[data-mist-engine-addons-theme="city-of-mist"] .mist-engine .card,
+html[data-mist-engine-addons-theme="city-of-mist"] .mist-engine .themekit-box {
+  background-color: #f1e6d1;
+  border-color: #8b7962;
+}
+
+html[data-mist-engine-addons-theme="city-of-mist"] .mist-engine a,
+html[data-mist-engine-addons-theme="city-of-mist"] .mist-engine .clickable,
+html[data-mist-engine-addons-theme="city-of-mist"] .mist-engine .rollable {
+  color: var(--litm-color-accent-3);
+}
+
+html[data-mist-engine-addons-theme="city-of-mist"] .mist-engine .rollable:hover,
+html[data-mist-engine-addons-theme="city-of-mist"]
+  .mist-engine
+  .clickable:hover {
+  color: var(--litm-color-accent-2);
+  text-shadow: 0 1px 0 #f5e8c5;
+}
+
+html[data-mist-engine-addons-theme="city-of-mist"]
+  #litm-scene-tags-overlay
+  .litm-sto-story,
+html[data-mist-engine-addons-theme="city-of-mist"]
+  #litm-scene-tags-overlay
+  .litm-sto-tag {
+  background-color: #f1e6d1;
+  border-color: #8b7962;
+  color: var(--litm-color);
+}
+
+html[data-mist-engine-addons-theme="city-of-mist"]
+  .mist-engine-addons-theme-group {
+  border-inline-start-color: rgb(141 60 48 / 65%);
+}
+
+html[data-mist-engine-addons-theme="city-of-mist"]
+  .mist-engine-addons-theme-heading {
+  color: var(--litm-color-accent-3);
+  font-family: var(--litm-font-heading);
+  opacity: 0.9;
+}

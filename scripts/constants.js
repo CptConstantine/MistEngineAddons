@@ -5,4 +5,11 @@ export const FOUNDRY_MAJOR_VERSION = 14;
 export const SETTINGS = Object.freeze({
   ORGANIZE_STORY_TAGS: "organize-story-tags",
   ENABLE_NARRATOR_ROLL_EDITOR: "enable-narrator-roll-editor",
+  STYLE_OVERRIDE: "style-override",
+});
+
+export const STYLE_OVERRIDES = Object.freeze({
+  NONE: "none",
+  CITY_OF_MIST: "city-of-mist",
+  OTHERSCAPE: "otherscape",
 });
